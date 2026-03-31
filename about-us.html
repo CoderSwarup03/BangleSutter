@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BangalSutters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+
+    <style>
+        .heebo {
+            font-family: "Heebo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <main>
+        <section class="relative overflow-hidden">
+            <img src="./images/about-us-banner.jpg" class="h-[50vh] w-full object-cover" alt="about us banner">
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white">About Us</h1>
+
+                <div class="flex items-center gap-2 text-white text-sm md:text-base mt-3">
+                    <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">Home</a>
+                    <span>/</span>
+                    <a href="about.html" class="hover:text-[#34C5F4] transition duration-300">About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16">
+            <div class="max-w-[90%] lg:max-w-[75%] mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
+
+                <!-- Left Content -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-5">
+                    <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
+                        Company Profile
+                    </h4>
+
+                    <div class="space-y-5">
+                        <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                            Bengal Rolling Shutters & Engg. Works was established in the year 1972 as a partnership firm
+                            at Howrah, West Bengal (India). We are engaged in manufacturing and supplying a diverse
+                            range of Rolling Shutters, Blinds, Sliding & Swinging Gates, Parking Barriers, Roofing
+                            Sheet, Roadway Safety Products & Building Construction Material. These products are highly
+                            appreciated for their durability, sturdy construction, dimensional accuracy, low maintenance
+                            and easy installation. Our products are a part of various commercial and non-commercial
+                            establishments across the country.
+                        </p>
+
+                        <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                            Our brilliant track record proves one thing that the company is backed with an efficient and
+                            dedicated team of professionals. We have appointed experienced professionals as heads of
+                            each department so that under their guidance all the operations are executed in an
+                            appropriate manner. These department heads also assist us in the recruitment process and
+                            thoroughly scrutinize the skills of interviewing candidates.
+                        </p>
+
+                        <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                            Quality procurement is very important to maintain high standards of production. Therefore,
+                            we
+                            have carefully short listed authentic market vendors, who offer us high end raw materials at
+                            market leading rates. The procured lot of raw materials is meticulously inspected by
+                            seasoned quality controllers before using them in the manufacturing processes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full lg:w-1/2">
+                    <img src="./images/about-us-image.jpg"
+                        class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[80vh] object-cover rounded-md shadow-md"
+                        alt="about us">
+                </div>
+            </div>
+
+            <!-- Bottom Paragraph -->
+            <div class="max-w-[90%] lg:max-w-[75%] mx-auto mt-10">
+                <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                    We are empowered with a technologically advanced and spacious manufacturing unit. This unit boasts a
+                    large installation and production capacity. We have installed a diverse range of functionally
+                    efficient machines, which help us in manufacturing products in huge quantities and varied
+                    specifications. We offer an extensive array of products that are used in building construction work
+                    and thus, serve as a one-stop-shop for the same. Our qualitative ready-made building solution saves
+                    the hassles of running here and there for desired products. We make sure that the desired quantity
+                    of products is delivered at client's end within the set time frame.
+                </p>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+
+
+
+    <script>
+        function initMobileMenu() {
+            const menuBtn = document.getElementById("menuBtn");
+            const closeMenuBtn = document.getElementById("closeMenuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const overlay = document.getElementById("overlay");
+
+            const overviewBtn = document.getElementById("overviewBtn");
+            const overviewMenu = document.getElementById("overviewMenu");
+            const overviewIcon = document.getElementById("overviewIcon");
+
+            const productsBtn = document.getElementById("productsBtn");
+            const productsMenu = document.getElementById("productsMenu");
+            const productsIcon = document.getElementById("productsIcon");
+
+            if (!menuBtn || !closeMenuBtn || !mobileMenu || !overlay) {
+                console.log("Mobile menu elements not found");
+                return;
+            }
+
+            function openMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                overlay.classList.remove("opacity-0", "invisible");
+                overlay.classList.add("opacity-100", "visible");
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                overlay.classList.remove("opacity-100", "visible");
+                overlay.classList.add("opacity-0", "invisible");
+            }
+
+            menuBtn.addEventListener("click", openMenu);
+            closeMenuBtn.addEventListener("click", closeMenu);
+            overlay.addEventListener("click", closeMenu);
+
+            if (overviewBtn && overviewMenu && overviewIcon) {
+                overviewBtn.addEventListener("click", () => {
+                    overviewMenu.classList.toggle("hidden");
+                    overviewIcon.classList.toggle("rotate-180");
+                });
+            }
+
+            if (productsBtn && productsMenu && productsIcon) {
+                productsBtn.addEventListener("click", () => {
+                    productsMenu.classList.toggle("hidden");
+                    productsIcon.classList.toggle("rotate-180");
+                });
+            }
+        }
+
+        fetch("./includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                initMobileMenu();
+            });
+
+        fetch("./includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
