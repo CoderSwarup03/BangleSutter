@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BangalSutters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+
+    <style>
+        .heebo {
+            font-family: "Heebo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        .slider-track {
+            animation: smoothSlider 22s linear infinite;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes smoothSlider {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 12px));
+            }
+        }
+    </style>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="relative overflow-hidden">
+        <div class="relative w-full h-[60vh] md:h-[80vh]">
+            <!-- Slides -->
+            <img src="./images/brs1.jpg" alt="banner1"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-500">
+            <img src="./images/brs2.jpg" alt="banner2"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+            <img src="./images/brs3.jpg" alt="banner3"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+            <img src="./images/brs4.jpg" alt="banner4"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+            <img src="./images/brs5.jpg" alt="banner5"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+            <img src="./images/brs6.jpg" alt="banner6"
+                class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/20"></div>
+
+            <!-- Left Button -->
+            <button id="prevBtn"
+                class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#0056B3] w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg flex items-center justify-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Right Button -->
+            <button id="nextBtn"
+                class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#0056B3] w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg flex items-center justify-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Our Product -->
+    <section class="py-12 overflow-hidden">
+        <div class="max-w-[75%] mx-auto mt-5 flex flex-col gap-6">
+            <!-- Heading -->
+            <div>
+                <h3 class="text-2xl md:text-4xl text-[#34C5F4] font-bold capitalize">Our Products</h3>
+                <div class="w-[14vw] h-1 bg-[#34C5F4] mt-3"></div>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="relative mt-6 overflow-hidden">
+                <div id="productSlider" class="flex gap-6 slider-track w-max">
+
+                    <!-- Original Cards -->
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/COMMERCIAL DOORS.jpg" alt="commercial-door"
+                            class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Commercial Doors
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/GATES.jpg" alt="gates" class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Gates
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/BOOM BARRIERS.jpg" alt="boom-barriers" class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Boom Barriers
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/ROLLING SHUTTERS.png" alt="rolling-shutters"
+                            class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Rolling Shutters
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Cards for smooth infinite effect -->
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/COMMERCIAL DOORS.jpg" alt="commercial-door"
+                            class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Commercial Doors
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/GATES.jpg" alt="gates" class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Gates
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/BOOM BARRIERS.jpg" alt="boom-barriers" class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Boom Barriers
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[280px] md:min-w-[340px] lg:min-w-[360px] bg-white shrink-0">
+                        <img src="./images/ROLLING SHUTTERS.png" alt="rolling-shutters"
+                            class="w-full h-[240px] object-cover">
+                        <div class="bg-[#F38023] py-8 px-4 flex flex-col items-center justify-center gap-5">
+                            <p class="text-white text-center text-xl md:text-2xl font-semibold uppercase">
+                                Rolling Shutters
+                            </p>
+                            <button
+                                class="bg-[#34C5F4] text-white px-8 py-3 text-lg font-semibold uppercase hover:bg-sky-400 transition">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section -->
+    <section class="relative w-full h-[300px] md:h-[500px] bg-center bg-cover bg-no-repeat bg-fixed"
+        style="background-image: url('./images/brs5.jpg');">
+        <div class="absolute inset-0 bg-black/30"></div>
+    </section>
+
+
+    <section class="mt-[10vh] mv-[10vh]">
+        <div class="max-w-[75%] mx-auto mt-5 flex flex-col md:flex-row justify-between gap-[10vw]">
+            <div class="flex flex-col gap-2 w-full md:w-[35%] relative">
+                <img src="./images/whoweare-1.jpg" alt="whole ware" class="w-full">
+
+                <img src="./images/whoweare-2.jpg" alt="whole ware"
+                    class="absolute left-0 bottom-6 w-[55%] border-4 border-white shadow-xl">
+            </div>
+
+            <div class="w-full md:w-[65%] flex flex-col gap-3 items-start">
+                <h4 class="text-xl text-[rgb(236, 25, 24)] uppercase">Overview</h4>
+                <h2 class="text-3xl font-bold">Welcome To BENGAL ROLLING SHUTTERS & ENGG.WORKS</h2>
+
+                <p>
+                    We take the opportunity to introduce BENGAL ROLLING SHUTTERS & ENGG.WORKS a private limited company
+                    in the business of Rolling shutter and manufacturing. Bengal Rolling Shutters(BRS ), a brand
+                    synonymous with Rolling Shutters in West Bengal and around is now in existence of 42nd year of
+                    service to the Shuttering Industry. Established in the year 1972, BRS, based in Kolkata is the
+                    pioneer in manufacturing the Quality Rolling shutters in the Region. Over four decades, BRS has
+                    coined its undisputed name and recognition in the market, catering to Small, Medium and Corporate
+                    organisations.
+                </p>
+
+                <button
+                    class="group relative overflow-hidden px-5 py-3 flex rounded-md items-center gap-2 bg-[#34C5F4] text-white transition-all duration-500">
+
+                    <span
+                        class="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+                    <span class="relative z-10 group-hover:text-black transition duration-500 uppercase font-semibold">
+                        Read More
+                    </span>
+
+                    <div
+                        class="relative z-10 h-5 w-5 rounded-full bg-white flex items-center justify-center transition duration-500 group-hover:bg-black">
+                        <i
+                            class="hgi hgi-stroke hgi-arrow-right-02 text-[#34C5F4] group-hover:text-white transition duration-500"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- section -->
+    <section class="py-12 overflow-hidden bg-[#f3f3f3] mt-[10vh]">
+        <div class="max-w-[75%] mx-auto mt-5 flex flex-col gap-8">
+            <!-- Heading -->
+            <div>
+                <h3 class="text-2xl md:text-4xl text-[#34C5F4] font-bold capitalize">
+                    Industries We Served
+                </h3>
+                <div class="w-[220px] md:w-[350px] h-1 bg-[#34C5F4] mt-3"></div>
+            </div>
+
+            <!-- Mobile slider / Desktop grid -->
+            <div class="md:grid md:grid-cols-3 md:gap-8 flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar mt-2">
+
+                <!-- Card 1 -->
+                <div
+                    class="min-w-full md:min-w-0 snap-center bg-[#E9EAEB] p-8 min-h-[320px] flex flex-col items-start justify-start">
+                    <div class="h-20 w-20 rounded-full bg-white flex items-center justify-center mb-8">
+                        <i class="ri-user-fill text-[#093A7D] text-4xl"></i>
+                    </div>
+
+                    <h4 class="text-2xl text-black font-medium mb-6">Commercial Sector</h4>
+
+                    <p class="text-gray-700 text-[18px] leading-10">
+                        Rolling Shutters, Motorized Rolling Shutters, Aluminium Rolling Shutters,
+                        Poly Carbonate Rolling Shutters, Garage and Automatic Gates,
+                        Roller and Vertical Blinds
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="min-w-full md:min-w-0 snap-center bg-[#093A7D] p-8 min-h-[320px] flex flex-col items-start justify-start text-white">
+                    <div class="h-20 w-20 rounded-full bg-white flex items-center justify-center mb-8">
+                        <i class="ri-trophy-fill text-[#093A7D] text-4xl"></i>
+                    </div>
+
+                    <h4 class="text-2xl font-medium mb-6">Industrial Sector</h4>
+
+                    <p class="text-white text-[18px] leading-10">
+                        Ware House Roll up Shutters, Factory Rolling Shutters, Aircraft Hangar (PU)
+                        motorized Doors, Swing and sliding gate with motorisation,
+                        Shipyard Doors, Logistics, Dock Levellers
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="min-w-full md:min-w-0 snap-center bg-[#093A7D] p-8 min-h-[320px] flex flex-col items-start justify-start text-white">
+                    <div class="h-20 w-20 rounded-full bg-white flex items-center justify-center mb-8">
+                        <i class="ri-checkbox-circle-fill text-[#093A7D] text-4xl"></i>
+                    </div>
+
+                    <h4 class="text-2xl font-medium mb-6">Residential Sector</h4>
+
+                    <p class="text-white text-[18px] leading-10">
+                        Remote Control Window Shutters, Garage Doors, Aluminium Doors and Windows,
+                        Roller and Wooden Blinds
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div id="footer"></div>
+
+    <!-- script area -->
+    <!-- header and footer script & menu sctipt -->
+    <script>
+        function initMobileMenu() {
+            const menuBtn = document.getElementById("menuBtn");
+            const closeMenuBtn = document.getElementById("closeMenuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const overlay = document.getElementById("overlay");
+
+            const overviewBtn = document.getElementById("overviewBtn");
+            const overviewMenu = document.getElementById("overviewMenu");
+            const overviewIcon = document.getElementById("overviewIcon");
+
+            const productsBtn = document.getElementById("productsBtn");
+            const productsMenu = document.getElementById("productsMenu");
+            const productsIcon = document.getElementById("productsIcon");
+
+            if (!menuBtn || !closeMenuBtn || !mobileMenu || !overlay) {
+                console.log("Mobile menu elements not found");
+                return;
+            }
+
+            function openMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                overlay.classList.remove("opacity-0", "invisible");
+                overlay.classList.add("opacity-100", "visible");
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                overlay.classList.remove("opacity-100", "visible");
+                overlay.classList.add("opacity-0", "invisible");
+            }
+
+            menuBtn.addEventListener("click", openMenu);
+            closeMenuBtn.addEventListener("click", closeMenu);
+            overlay.addEventListener("click", closeMenu);
+
+            if (overviewBtn && overviewMenu && overviewIcon) {
+                overviewBtn.addEventListener("click", () => {
+                    overviewMenu.classList.toggle("hidden");
+                    overviewIcon.classList.toggle("rotate-180");
+                });
+            }
+
+            if (productsBtn && productsMenu && productsIcon) {
+                productsBtn.addEventListener("click", () => {
+                    productsMenu.classList.toggle("hidden");
+                    productsIcon.classList.toggle("rotate-180");
+                });
+            }
+        }
+
+        fetch("./includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                initMobileMenu();
+            });
+
+        fetch("./includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <!-- hero slider script -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("opacity-100", i === index);
+                slide.classList.toggle("opacity-0", i !== index);
+            });
+        }
+
+        nextBtn.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        prevBtn.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+
+</html>
