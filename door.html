@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BangalSutters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+
+    <style>
+        .heebo {
+            font-family: "Heebo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <main>
+        <section class="relative overflow-hidden">
+            <img src="./images/commercial-door-banner.avif" class="h-[50vh] w-full object-cover"
+                alt="commercial doors banner">
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white">Commercial Doors</h1>
+
+                <div class="flex items-center gap-2 text-white text-sm md:text-base mt-3">
+                    <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">Home</a>
+                    <span>/</span>
+                    <a href="commercial-doors.html" class="hover:text-[#34C5F4] transition duration-300">Commercial
+                        Doors</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16">
+            <div class="max-w-[90%] lg:max-w-[75%] mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
+
+                <!-- Left Content -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-5">
+                    <h4 class="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
+                        Doors
+                    </h4>
+
+                    <div class="space-y-5">
+                        <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                            Bengal Rolling Shutters & Engg. Works offers a comprehensive range of high-quality doors
+                            designed
+                            to meet the needs of commercial, industrial, and residential spaces. Our doors are
+                            manufactured
+                            using premium-grade raw materials and modern production techniques to ensure durability,
+                            strength,
+                            safety, and long-lasting performance. We provide solutions that are suitable for warehouses,
+                            factories, showrooms, office buildings, retail spaces, and other establishments where
+                            reliability
+                            and functionality are essential.
+                        </p>
+
+                        <p class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                            Our door range includes commercial doors, industrial doors, automatic doors, high-speed
+                            doors,
+                            fire-rated doors, and customized door systems that can be tailored to specific project
+                            requirements. These doors are designed to offer smooth operation, excellent security,
+                            space-saving
+                            functionality, and aesthetic appeal. With a focus on precision engineering, our products are
+                            built
+                            to withstand regular use while maintaining superior performance and minimal maintenance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full lg:w-1/2">
+                    <img src="./images/door-image.jpg"
+                        class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[80vh] object-cover rounded-md shadow-md"
+                        alt="doors">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div id="footer"></div>
+
+    <script>
+        function initMobileMenu() {
+            const menuBtn = document.getElementById("menuBtn");
+            const closeMenuBtn = document.getElementById("closeMenuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const overlay = document.getElementById("overlay");
+
+            const overviewBtn = document.getElementById("overviewBtn");
+            const overviewMenu = document.getElementById("overviewMenu");
+            const overviewIcon = document.getElementById("overviewIcon");
+
+            const productsBtn = document.getElementById("productsBtn");
+            const productsMenu = document.getElementById("productsMenu");
+            const productsIcon = document.getElementById("productsIcon");
+
+            if (!menuBtn || !closeMenuBtn || !mobileMenu || !overlay) {
+                console.log("Mobile menu elements not found");
+                return;
+            }
+
+            function openMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                overlay.classList.remove("opacity-0", "invisible");
+                overlay.classList.add("opacity-100", "visible");
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                overlay.classList.remove("opacity-100", "visible");
+                overlay.classList.add("opacity-0", "invisible");
+            }
+
+            menuBtn.addEventListener("click", openMenu);
+            closeMenuBtn.addEventListener("click", closeMenu);
+            overlay.addEventListener("click", closeMenu);
+
+            if (overviewBtn && overviewMenu && overviewIcon) {
+                overviewBtn.addEventListener("click", () => {
+                    overviewMenu.classList.toggle("hidden");
+                    overviewIcon.classList.toggle("rotate-180");
+                });
+            }
+
+            if (productsBtn && productsMenu && productsIcon) {
+                productsBtn.addEventListener("click", () => {
+                    productsMenu.classList.toggle("hidden");
+                    productsIcon.classList.toggle("rotate-180");
+                });
+            }
+        }
+
+        fetch("./includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                initMobileMenu();
+            });
+
+        fetch("./includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
