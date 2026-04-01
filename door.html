@@ -27,21 +27,51 @@
     <div id="header"></div>
     <main>
         <section class="relative overflow-hidden">
-            <img src="./images/commercial-door-banner.avif" class="h-[50vh] w-full object-cover"
+
+            <!-- Background -->
+            <img src="./images/commercial-door-banner.avif" class="h-[55vh] md:h-[65vh] w-full object-cover"
                 alt="commercial doors banner">
 
-            <div class="absolute inset-0 bg-black/50"></div>
+            <!-- Overlays -->
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
-                <h1 class="text-3xl md:text-5xl font-bold text-white">Commercial Doors</h1>
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+                <div class="flex flex-col items-center gap-4 max-w-3xl">
 
-                <div class="flex items-center gap-2 text-white text-sm md:text-base mt-3">
-                    <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">Home</a>
-                    <span>/</span>
-                    <a href="commercial-doors.html" class="hover:text-[#34C5F4] transition duration-300">Commercial
-                        Doors</a>
+                    <!-- Tag -->
+                    <span class="text-[#34C5F4] text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">
+                        Product Category
+                    </span>
+
+                    <!-- Heading -->
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Doors
+                    </h1>
+
+                    <!-- Divider -->
+                    <div class="w-20 h-1 bg-[#34C5F4] rounded-full"></div>
+
+                    <!-- Breadcrumb -->
+                    <div class="flex items-center gap-2 text-white/80 text-xs md:text-sm flex-wrap justify-center">
+
+                        <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">
+                            Home
+                        </a>
+
+                        <span class="text-white/40">/</span>
+
+                        <!-- Active -->
+                        <span class="text-white font-medium">
+                            Doors
+                        </span>
+
+                    </div>
+
                 </div>
             </div>
+
         </section>
 
         <section class="py-12 md:py-16">

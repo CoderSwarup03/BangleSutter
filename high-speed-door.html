@@ -27,23 +27,54 @@
     <div id="header"></div>
     <main>
         <section class="relative overflow-hidden">
-            <img src="./images/High-Speed-Doors-banner.jpg" class="h-[50vh] w-full object-cover"
+
+            <!-- Background -->
+            <img src="./images/High-Speed-Doors-banner.jpg" class="h-[55vh] md:h-[65vh] w-full object-cover"
                 alt="high speed doors banner">
 
-            <div class="absolute inset-0 bg-black/50"></div>
+            <!-- Overlays -->
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
-                <h1 class="text-3xl md:text-5xl font-bold text-white">High Speed Doors</h1>
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+                <div class="flex flex-col items-center gap-4 max-w-3xl">
 
-                <div class="flex items-center gap-2 text-white text-sm md:text-base mt-3">
-                    <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">Home</a>
-                    <span>/</span>
-                    <a href="" class="hover:text-[#34C5F4] transition duration-300">Products</a>
-                    <span>/</span>
-                    <a href="high-speed-doors.html" class="hover:text-[#34C5F4] transition duration-300">High Speed
-                        Doors</a>
+                    <!-- Tag -->
+                    <span class="text-[#34C5F4] text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">
+                        Product Category
+                    </span>
+
+                    <!-- Heading -->
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        High Speed Doors
+                    </h1>
+
+                    <!-- Divider -->
+                    <div class="w-20 h-1 bg-[#34C5F4] rounded-full"></div>
+
+                    <!-- Breadcrumb -->
+                    <div class="flex items-center gap-2 text-white/80 text-xs md:text-sm flex-wrap justify-center">
+                        <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">
+                            Home
+                        </a>
+
+                        <span class="text-white/40">/</span>
+
+                        <a href="./high-speed-door.html" class="hover:text-[#34C5F4] transition duration-300">
+                            Products
+                        </a>
+
+                        <span class="text-white/40">/</span>
+
+                        <span class="text-white font-medium">
+                            High Speed Doors
+                        </span>
+                    </div>
+
                 </div>
             </div>
+
         </section>
 
         <section class="py-12 md:py-16">
@@ -127,51 +158,104 @@
             </div>
 
             <div class="max-w-[90%] lg:max-w-[75%] mx-auto flex flex-col lg:flex-row items-start gap-10 ">
-                <div
-                    class="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition duration-300 mt-3">
-                    <div class="flex flex-col gap-5">
-                        <h4 class="text-xl md:text-2xl font-semibold text-black">
-                            Comprehensive Range
-                        </h4>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 lg:p-10 shadow-sm mt-6">
+                    <div class="flex flex-col gap-10">
 
-                        <div class="w-16 h-1 bg-[#34C5F4]"></div>
+                        <!-- Comprehensive Range -->
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <h4 class="text-xl md:text-2xl font-semibold text-black">
+                                    Comprehensive Range
+                                </h4>
+                                <div class="w-16 h-1 bg-[#34C5F4] mt-3 rounded-full"></div>
+                            </div>
 
-                        <ul class="space-y-4 text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium">
-                            <li>
-                                <span class="font-semibold text-black">Flexible Curtain:</span>
-                                The doors come with a flexible curtain that offers transparency and flexibility in
-                                operation.
-                            </li>
+                            <ul
+                                class="space-y-4 text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium">
+                                <li>
+                                    <span class="font-semibold text-black">Flexible Curtain:</span>
+                                    The doors come with a flexible curtain that offers transparency and flexibility in
+                                    operation.
+                                </li>
 
-                            <li>
-                                <span class="font-semibold text-black">Combination Options:</span>
-                                Available in combination with sectional doors and rolling shutters for versatile
-                                application.
-                            </li>
+                                <li>
+                                    <span class="font-semibold text-black">Combination Options:</span>
+                                    Available in combination with sectional doors and rolling shutters for versatile
+                                    application.
+                                </li>
 
-                            <li>
-                                <span class="font-semibold text-black">Spiral Doors:</span>
-                                Service-friendly spiral doors with smooth aluminum profiles provide an additional option
-                                for high-speed door solutions.
-                            </li>
+                                <li>
+                                    <span class="font-semibold text-black">Spiral Doors:</span>
+                                    Service-friendly spiral doors with smooth aluminum profiles provide an additional
+                                    option for high-speed door solutions.
+                                </li>
 
-                            <li>
-                                <span class="font-semibold text-black">FU Control:</span>
-                                The Frequency Converter Control (FU) standard equipment prolongs the lifespan of door
-                                components.
-                            </li>
+                                <li>
+                                    <span class="font-semibold text-black">FU Control:</span>
+                                    The Frequency Converter Control (FU) standard equipment prolongs the lifespan of
+                                    door components.
+                                </li>
 
-                            <li>
-                                <span class="font-semibold text-black">Safety Features:</span>
-                                Equipped with a safety light grille and SoftEdge bottom profile for enhanced safety.
-                            </li>
+                                <li>
+                                    <span class="font-semibold text-black">Safety Features:</span>
+                                    Equipped with a safety light grille and SoftEdge bottom profile for enhanced safety.
+                                </li>
 
-                            <li>
-                                <span class="font-semibold text-black">Cost-Efficient:</span>
-                                Low-maintenance and easy to fit, these doors are cost-efficient and economical for
-                                everyday use.
-                            </li>
-                        </ul>
+                                <li>
+                                    <span class="font-semibold text-black">Cost-Efficient:</span>
+                                    Low-maintenance and easy to fit, these doors are cost-efficient and economical for
+                                    everyday use.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="w-full h-[1px] bg-gray-200"></div>
+
+                        <!-- Improved Work Environment -->
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <h4 class="text-xl md:text-2xl font-semibold text-black">
+                                    Improved Work Environment
+                                </h4>
+                                <div class="w-16 h-1 bg-[#34C5F4] mt-3 rounded-full"></div>
+                            </div>
+
+                            <p
+                                class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                                Bengal Rolling Shutters High-Speed Doors not only reduce energy losses but also improve
+                                the
+                                overall work environment by minimizing draughts and maintaining better indoor
+                                conditions.
+                                Their high performance in both internal and external applications ensures they meet the
+                                demands of various industrial settings.
+                            </p>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="w-full h-[1px] bg-gray-200"></div>
+
+                        <!-- Conclusion -->
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <h4 class="text-xl md:text-2xl font-semibold text-black">
+                                    Conclusion
+                                </h4>
+                                <div class="w-16 h-1 bg-[#34C5F4] mt-3 rounded-full"></div>
+                            </div>
+
+                            <p
+                                class="text-[#7B6767] text-sm md:text-base leading-7 md:leading-8 font-medium text-justify">
+                                Bengal Rolling Shutters High-Speed Doors are an ideal solution for optimizing traffic
+                                flow,
+                                saving energy, and enhancing safety in your facility. With their advanced features and
+                                robust
+                                construction, they offer reliable performance and cost efficiency, making them a
+                                valuable
+                                addition to any industrial or commercial environment.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
