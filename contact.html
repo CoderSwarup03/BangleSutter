@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BangalSutters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+
+    <style>
+        .heebo {
+            font-family: "Heebo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <main>
+        <section class="relative overflow-hidden">
+
+            <!-- Background -->
+            <img src="./images/contact-banner.avif" class="h-[55vh] md:h-[65vh] w-full object-cover"
+                alt="career banner">
+
+            <!-- Overlays -->
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/50"></div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+                <div class="flex flex-col items-center gap-4 max-w-3xl">
+
+                    <!-- Tag -->
+                    <span class="text-[#34C5F4] text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">
+                        contact
+                    </span>
+
+                    <!-- Heading -->
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Contact
+                    </h1>
+
+                    <!-- Divider -->
+                    <div class="w-20 h-1 bg-[#34C5F4] rounded-full"></div>
+
+                    <!-- Breadcrumb -->
+                    <div class="flex items-center gap-2 text-white/80 text-xs md:text-sm flex-wrap justify-center">
+
+                        <a href="index.html" class="hover:text-[#34C5F4] transition duration-300">
+                            Home
+                        </a>
+
+                        <span class="text-white/40">/</span>
+
+                        <!-- <a href="./boom-barriers.html" class="hover:text-[#34C5F4] transition duration-300">
+                            Products
+                        </a> -->
+
+                        <!-- <span class="text-white/40">/</span> -->
+
+                        <span class="text-white font-medium">
+                            Contact
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- apply now -->
+        <section class="py-12 md:py-16 bg-[#f8fbfe]">
+            <div class="max-w-[90%] lg:max-w-[75%] mx-auto">
+
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <h3 class="heebo md:text-4xl font-bold text-black">
+                        Feel Free to drop us a Message
+                    </h3>
+                    <div class="w-20 h-1 bg-[#34C5F4] mx-auto mt-3 rounded-full"></div>
+                </div>
+
+                <!-- Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+                    <!-- LEFT: FORM -->
+                    <div class="lg:col-span-2 bg-white border border-[#34C5F4]/20 rounded-2xl shadow-md p-6 md:p-8">
+
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            <!-- Input Field -->
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-medium text-black">Name</label>
+                                <input type="text" placeholder="Enter your name"
+                                    class="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#34C5F4] focus:ring-2 focus:ring-[#34C5F4]/20 transition">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-medium text-black">Email</label>
+                                <input type="email" placeholder="Enter your email"
+                                    class="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#34C5F4] focus:ring-2 focus:ring-[#34C5F4]/20 transition">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-medium text-black">Phone</label>
+                                <input type="tel" placeholder="Enter your phone number"
+                                    class="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#34C5F4] focus:ring-2 focus:ring-[#34C5F4]/20 transition">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-sm font-medium text-black">Subject</label>
+                                <input type="text" placeholder="Enter subject"
+                                    class="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#34C5F4] focus:ring-2 focus:ring-[#34C5F4]/20 transition">
+                            </div>
+
+                            <!-- Message -->
+                            <div class="md:col-span-2 flex flex-col gap-2">
+                                <label class="text-sm font-medium text-black">Message</label>
+                                <textarea rows="5" placeholder="Write your message..."
+                                    class="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#34C5F4] focus:ring-2 focus:ring-[#34C5F4]/20 transition resize-none"></textarea>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="md:col-span-2 flex justify-center mt-4">
+                                <button
+                                    class="group relative overflow-hidden px-6 py-3 flex items-center gap-3 rounded-lg bg-[#34C5F4] text-white shadow-md hover:shadow-lg transition-all duration-500">
+
+                                    <span
+                                        class="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
+
+                                    <span
+                                        class="relative z-10 uppercase font-semibold tracking-wide group-hover:text-black transition duration-500">
+                                        Send Message
+                                    </span>
+
+                                    <div
+                                        class="relative z-10 h-6 w-6 rounded-full bg-white flex items-center justify-center transition duration-500 group-hover:bg-black">
+                                        <i
+                                            class="hgi hgi-stroke hgi-arrow-right-02 text-[#34C5F4] group-hover:text-white transition duration-500"></i>
+                                    </div>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- RIGHT: CONTACT INFO -->
+                    <div class="flex flex-col gap-6">
+
+                        <!-- Card -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 hover:shadow-md transition">
+
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#34C5F4]/10">
+                                📍
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-black">Address</h4>
+                                <p class="text-sm text-[#7B6767]">
+                                    103, 1st Floor Netaji Subhas Road, Kolkata - 700001
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 hover:shadow-md transition">
+
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#34C5F4]/10">
+                                ✉️
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-black">Email</h4>
+                                <p class="text-sm text-[#7B6767]">
+                                    info@bengalshutters.in
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 hover:shadow-md transition">
+
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#34C5F4]/10">
+                                📞
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-black">Phone</h4>
+                                <p class="text-sm text-[#7B6767]">
+                                    +91 93392 63369
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+
+
+
+    <script>
+        function initMobileMenu() {
+            const menuBtn = document.getElementById("menuBtn");
+            const closeMenuBtn = document.getElementById("closeMenuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const overlay = document.getElementById("overlay");
+
+            const overviewBtn = document.getElementById("overviewBtn");
+            const overviewMenu = document.getElementById("overviewMenu");
+            const overviewIcon = document.getElementById("overviewIcon");
+
+            const productsBtn = document.getElementById("productsBtn");
+            const productsMenu = document.getElementById("productsMenu");
+            const productsIcon = document.getElementById("productsIcon");
+
+            if (!menuBtn || !closeMenuBtn || !mobileMenu || !overlay) {
+                console.log("Mobile menu elements not found");
+                return;
+            }
+
+            function openMenu() {
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                overlay.classList.remove("opacity-0", "invisible");
+                overlay.classList.add("opacity-100", "visible");
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                overlay.classList.remove("opacity-100", "visible");
+                overlay.classList.add("opacity-0", "invisible");
+            }
+
+            menuBtn.addEventListener("click", openMenu);
+            closeMenuBtn.addEventListener("click", closeMenu);
+            overlay.addEventListener("click", closeMenu);
+
+            if (overviewBtn && overviewMenu && overviewIcon) {
+                overviewBtn.addEventListener("click", () => {
+                    overviewMenu.classList.toggle("hidden");
+                    overviewIcon.classList.toggle("rotate-180");
+                });
+            }
+
+            if (productsBtn && productsMenu && productsIcon) {
+                productsBtn.addEventListener("click", () => {
+                    productsMenu.classList.toggle("hidden");
+                    productsIcon.classList.toggle("rotate-180");
+                });
+            }
+        }
+
+        fetch("./includes/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                initMobileMenu();
+            });
+
+        fetch("./includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
